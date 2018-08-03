@@ -57,14 +57,15 @@
     });
     $('#upload-file').on('change',function(evt){
       let file = evt.target.files[0];
-      if(file.type.match('*.json')){
+      if(file.type.match('\.json')){
         let reader = new FileReader();
         reader.onload = (function(theFile){
           return function(e){
-            console.log(e.target.result);  
+            generate_prwm_from_json_object(e.target.result);  
           };
-        });
+        })(file);
         reader.readAsText(file);
+      }
     });
       
     
