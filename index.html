@@ -13,27 +13,28 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>   
 
     <!-- BufferGeometry to PRWM -->
-    <script src="https://cdn.glitch.com/beb87eb3-29a6-4925-8a1f-74a1610f3411%2Fthree-buffergeometry-to-prwm.min.js?1531213602368"></script>
+    <script src="./lib/three-buffergeometry-to-prwm.min.js"></script>
+    <!-- D3 and dbslice -->
+    <script src="./lib/d3.v4.min.js"></script>
+    <script src="./lib/d3-scale-chromatic.v1.min.js"></script>
+    <script src="./lib/dbslice.js"></script>
   </head>  
   <body>
-    <h1>This is a simple tool to convert JSON files to PRWM format.</h1>
+    <h1>JSON to PRWM Converter</h1>
     <p>
-       You can either paste the link to the JSON file or upload a JSON file.
+       This is a tool to convert JSON files to PRWM format. You can either paste the link to the JSON file or upload a JSON file.
     </p>
 <form>
   <div class="form-group">
-    <label for="input-url">URL of JSON file.</label>
-    <input type="url" class="form-control" id="input-url" placeholder="Enter email">
+    <label for="input-url">URL of JSON file</label>
+    <input type="url" class="form-control" id="input-url" placeholder="Enter URL.">
   </div>
-  <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-  </div>
-  <div class="form-group form-check">
-    <input type="checkbox" class="form-check-input" id="exampleCheck1">
-    <label class="form-check-label" for="exampleCheck1">Check me out</label>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
+  <button type="submit" class="btn btn-primary"></button>
 </form>
+    
+    <script>
+    $('.btn').on('click',function(){
+      
+    });</script>
   </body>
 </html>
