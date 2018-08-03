@@ -29,10 +29,20 @@
     </p>
     <form>
       <div class="form-group">
+        <label for="input-offset">Offset</label>
+        <input type="number" class="form-control" id="input-offset" value="0.005">
+      </div>
+      <div class="form-group">
         <label for="input-url">URL of JSON file</label>
         <input type="url" class="form-control" id="input-url" placeholder="Enter URL.">
       </div>
-      <button type="submit" class="btn btn-primary download-from-url">Download</button>
+      <div>
+        <button type="submit" class="btn btn-primary download-from-url">Download from URL</button>
+      </div>
+      <div class="form-group">
+        <label for="upload-file">Upload a JSON file</label>
+        <input type="file" class="form-control-file" id="upload-file">
+      </div>
     </form>
     
     
@@ -41,11 +51,14 @@
     
     <script>
     $('.download-from-url').on('click',function(){
-      let url = document.querySelector('.form-control').value;
+      let url = document.querySelector('#input-url').value;
       if(url){
+        generate_prwm_from_json(document.querySelector('#input-url').value ,
+                                document.querySelector('#input-offset').value);
+      }else{
         
       }
-      //generate_prwm_from_json(document.querySelector('.form-control').value);
+      
     });</script>
   </body>
 </html>
