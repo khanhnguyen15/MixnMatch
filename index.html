@@ -37,11 +37,7 @@
         <input type="url" class="form-control" id="input-url" placeholder="Enter URL.">
       </div>
       <div>
-        <button type="submit" class="btn btn-primary download-from-url">Download from URL</button>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="upload-file">Upload a JSON file</label>
-        <input type="file" class="form-control-file" id="upload-file">
+        <button type="button" class="btn btn-primary download-from-url">Download from URL</button>
       </div>
     </form>
     
@@ -57,9 +53,6 @@
                                 document.querySelector('#input-offset').value);
       }
       
-    });
-    $('#upload-file').on('change',function(e){
-      console.log(document.querySelector('#upload-file').value);
     });
     
     </script>
