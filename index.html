@@ -59,9 +59,10 @@
       let file = evt.target.files[0];
       if(file.type.match('\.json')){
         let reader = new FileReader();
+        let filename = file.name;
         reader.onload = (function(theFile){
           return function(e){
-            generate_prwm_from_json_object(e.target.result);  
+            generate_prwm_from_json_object(JSON.parse(e.target.result),filename);  
           };
         })(file);
         reader.readAsText(file);
