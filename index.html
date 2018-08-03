@@ -18,23 +18,34 @@
     <script src="./lib/d3.v4.min.js"></script>
     <script src="./lib/d3-scale-chromatic.v1.min.js"></script>
     <script src="./lib/dbslice.js"></script>
+    
+    <!-- functions -->
+    <script src="./lib/script.js"></script>
   </head>  
   <body>
     <h1>JSON to PRWM Converter</h1>
     <p>
        This is a tool to convert JSON files to PRWM format. You can either paste the link to the JSON file or upload a JSON file.
     </p>
-<form>
-  <div class="form-group">
-    <label for="input-url">URL of JSON file</label>
-    <input type="url" class="form-control" id="input-url" placeholder="Enter URL.">
-  </div>
-  <button type="submit" class="btn btn-primary"></button>
-</form>
+    <form>
+      <div class="form-group">
+        <label for="input-url">URL of JSON file</label>
+        <input type="url" class="form-control" id="input-url" placeholder="Enter URL.">
+      </div>
+      <button type="submit" class="btn btn-primary download-from-url">Download</button>
+    </form>
+    
+    
+    
+
     
     <script>
-    $('.btn').on('click',function(){
-      
+    $('.download-from-url').on('click',function(){
+      let url = document.querySelector('.form-control').value;
+      if(url){
+        
+      }
+      //generate_prwm_from_json(document.querySelector('.form-control').value);
     });</script>
   </body>
 </html>
