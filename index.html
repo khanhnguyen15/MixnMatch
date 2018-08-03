@@ -37,6 +37,10 @@
       <div>
         <button type="button" class="btn btn-primary download-from-url">Download from URL</button>
       </div>
+      <div class="form-group col-md-2">
+        <label for="upload-file">Upload a JSON file</label>
+        <input type="file" class = "form-control-file" id="upload-file"></input>
+      </div>
 
     </form>
     
@@ -45,12 +49,22 @@
 
     
     <script>
-    $('.download-from-url').on('click',function(){
+    $('.download-from-url').on('click',function(evt){
       let url = document.querySelector('#input-url').value;
       if(url){
         generate_prwm_from_json(document.querySelector('#input-url').value);
-      }
-      
+      }      
+    });
+    $('#upload-file').on('change',function(evt){
+      let file = evt.target.files[0];
+      if(file.type.match('*.json')){
+        let reader = new FileReader();
+        reader.onload = (function(theFile){
+          return function(e){
+            console.log(e.target.result);  
+          };
+        });
+        reader.readAsText(file);
     });
       
     
