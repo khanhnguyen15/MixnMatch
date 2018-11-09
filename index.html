@@ -39,13 +39,13 @@
     </form>
 
 
-<input style="{visibility:hidden}" type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
+<input style="display:none" type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
 
-<button style="{visibility:hidden}" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">
+<button style="display:none" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">
   Send Message
 </button>
 
- <div visible = "false" id="log"></div>
+ <div style="display:none" id="log"></div>
     
     
     
@@ -55,7 +55,8 @@
     $('.login-button').on('click',function(evt){
       let name = document.querySelector('#input-name').value;
       if(name){
-        create_new_user
+        myName = name;
+        person = new Person(0
       }      
     });
     $('#upload-file').on('change',function(evt){
