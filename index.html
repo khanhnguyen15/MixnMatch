@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>JSON to PRWM Conversion Tool</title>
+    <title>The Mix Message Demo</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,6 +25,16 @@
     <p>
        This app exemplifies our matching algorithm.
     </p>
+    
+    <form>
+      <div class="form-group col-md-6">
+        <label for="input-name">Username</label>
+        <input type="url" class="form-control" id="input-name" placeholder="Username">
+      </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-primary login-button">Login</button>
+      </div>
+    </form>
 
 
 <input type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
@@ -40,10 +50,10 @@
 
     
     <script>
-    $('.download-from-url').on('click',function(evt){
-      let url = document.querySelector('#input-url').value;
-      if(url){
-        generate_prwm_from_json(document.querySelector('#input-url').value);
+    $('.login-button').on('click',function(evt){
+      let name = document.querySelector('#input-name').value;
+      if(name){
+        create_new_user
       }      
     });
     $('#upload-file').on('change',function(evt){
