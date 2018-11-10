@@ -18,12 +18,13 @@
     <script src="./lib/client.js"></script>
     <!-- functions -->
     <script src="./lib/data.js"></script>
-    <script src="./lib/match.js"></script>
     <script src="./lib/api.js"></script>
+    <script src="./lib/match.js"></script>
+    
     
   </head>  
   <body>
-    <div class="card bg-info">
+    <div class="card bg-info border">
     <div class = "card-body">
     <h1 class="card-title font-weight-light">The Mix n Match Demo</h1>
     <p class="card-text font-weight-light">
@@ -43,13 +44,13 @@
   </div>
     </div>
     
-    <div class="card bg-warning" style="visibility:hidden">
+    <div class="card bg-warning border" style="visibility:hidden">
       <div class="card-body">
         <p class="card-text whoareyouconnectedto">
         </p>
          <div id="log"></div>
     <form>  
-<input type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
+<input type="text" id="msgInput" class="textarea" placeholder="Enter your message">
 <button id = "sendButton" class="btn btn-primary send-button" type="submit" name="action" onclick="sendMessage()">
   Send Message
 </button>
