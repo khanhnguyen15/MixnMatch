@@ -30,7 +30,9 @@ function myFunction() {
     var key2 = document.getElementById("mykey2").value;
     var lat = document.getElementById("mylat").value;
     var lon = document.getElementById("mylon").value;
+    var timestamp = new Date().getUTCMilliseconds();
     var person = { 
+          "ID":timestamp,
           "Name":name,
           "Gender": gen,
           "Age":age,
@@ -38,7 +40,11 @@ function myFunction() {
           "Keywords":[key1, key2],
           "Location": { "Lat":lat, "Lon":-lon},
          };
-  window.localStorage.setItem("new_data", JSON.stringify(person));
+  const f1 = require("./lib/data");
+  var arr = f1.arr;
+  arr.push(person);
+  window.localStorage.clear();
+  window.localStorage.setItem(timestamp, arr);
   document.getElementById("feedback").innerHTML = "successfully created user";
 }
 </script>
