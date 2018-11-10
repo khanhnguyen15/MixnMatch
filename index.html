@@ -67,10 +67,12 @@
           alert("no user found");
         }
         else{
-          var t = me.findclosestmatch(data);
-          console.log(t);
+          var bestmatch = me.findclosestmatch(data);
+          chatChannel = me.getName() + bestmatch.getName();
+          connectToRealtime();
           document.getElementById("msgInput").style.display = "block";
           document.getElementById("sendButton").style.display = "block";
+          document.getElementById("log").style.display = "block";
         }
       }      
     });
