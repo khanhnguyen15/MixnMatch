@@ -41,7 +41,7 @@
 
 <input style="display:none" type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
 
-<button style="display:none" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">
+<button style="display:none" id = "sendButton" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">
   Send Message
 </button>
 
@@ -55,8 +55,10 @@
     $('.login-button').on('click',function(evt){
       let name = document.querySelector('#input-name').value;
       if(name){
+        document.getElementById("msgInput").style.display = "block";
+        document.getElementById("sendButton").style.display = "block";
         myName = name;
-        person = new Person(0
+        
       }      
     });
     $('#upload-file').on('change',function(evt){
