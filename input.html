@@ -40,11 +40,11 @@ function myFunction() {
           "Keywords":[key1, key2],
           "Location": { "Lat":lat, "Lon":-lon},
          };
-  const f1 = require("./lib/data");
-  var arr = f1.arr;
-  arr.push(person);
-  window.localStorage.clear();
-  window.localStorage.setItem(timestamp, arr);
+  var objectOutput = window.localStorage.getItem("data");
+  var arr = JSON.parse(objectOutput)
+  arr.push(person)
+
+  window.localStorage.setItem("data1", JSON.stringify(arr));
   document.getElementById("feedback").innerHTML = "successfully created user";
 }
 </script>
