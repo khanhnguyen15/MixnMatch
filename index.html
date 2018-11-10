@@ -40,6 +40,9 @@
       <div class="col-md-2">
         <button type="button" class="btn btn-primary login-button">Login</button>
       </div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-primary create-button" onclick="location.href = './lib/input.html'">New User</button>
+      </div>
     </form>
       
   </div>
@@ -81,7 +84,7 @@
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
           connectToRealtime();
-          document.getElementByID.html("Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.");
+          document.getElementById("whoareyouconnectedto").innerHTML="Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.";
           document.getElementById("chatroom").style.display = "block";
         }
       }      
