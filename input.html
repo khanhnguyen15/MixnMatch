@@ -43,8 +43,8 @@ function myFunction() {
   var objectOutput = window.localStorage.getItem("data");
   var arr = JSON.parse(objectOutput)
   arr.push(person)
-
-  window.localStorage.setItem("data1", JSON.stringify(arr));
+  window.localStorage.clear();
+  window.localStorage.setItem("data", JSON.stringify(arr));
   document.getElementById("feedback").innerHTML = "successfully created user";
 }
 </script>
