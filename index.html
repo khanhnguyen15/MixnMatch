@@ -45,7 +45,7 @@
   </div>
     </div>
     
-    <div id="chatroom" class="card bg-warning border" style="display:none">
+    <div id="chatroom" class="card bg-warning" style="display:none">
       <div class="card-body">
         <span id="whoareyouconnectedto" class="card-text">
         </span>
@@ -81,7 +81,7 @@
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
           connectToRealtime();
-          $("#whoyouareconnectedto").html("Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.");
+          document.getElementByID.html("Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.");
           document.getElementById("chatroom").style.display = "block";
         }
       }      
