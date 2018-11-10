@@ -43,18 +43,17 @@
   </div>
     </div>
     
-    <div class="card bg-warning">
+    <div class="card bg-warning" style="visibility:hidden">
       <div class="card-body">
         <p class="card-text whoareyouconnectedto">
-          
         </p>
+         <div id="log"></div>
     <form>  
-<input style="display:none" type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
-<button style="display:none" id = "sendButton" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">
+<input type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
+<button id = "sendButton" class="btn btn-primary send-button" type="submit" name="action" onclick="sendMessage()">
   Send Message
 </button>
       </form>
- <div style="display:none" id="log"></div>
       </div>
     </div>
     
@@ -78,13 +77,14 @@
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
           connectToRealtime();
-          $(".whoyouareconnectedto").innerHTML = "Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.";
+          $(".whoyouareconnectedto").html("Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.");
           document.getElementById("msgInput").style.display = "block";
           document.getElementById("sendButton").style.display = "block";
           document.getElementById("log").style.display = "block";
         }
       }      
     });
+      /* For Reference
     $('#upload-file').on('change',function(evt){
       let file = evt.target.files[0];
       if(file.type.match('\.json')){
@@ -98,6 +98,7 @@
         reader.readAsText(file);
       }
     });
+    */
       
     
     </script>

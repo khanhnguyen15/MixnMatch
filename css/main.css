@@ -5,7 +5,8 @@ body {
 }
 
 #msgInput {
-  margin-top: 30px;  
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 #log {
@@ -42,4 +43,7 @@ body {
 
 .login-button{
   background-color: #EE2346 !important;
+}
+.send-button{
+  background-color: #075384 !important;
 }
