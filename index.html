@@ -90,12 +90,11 @@
           
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
-          console.log(bestmatch.getLocation().Lat);
           var xhttp = new XMLHttpRequest();
           xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
               console.log(this.responseText);
-              document.getElementById("moreinfo").innerHTML = "Lives in " + this.responseText.country + ", is " + bestmatch.getAge() + ", and has experienced " + bestmatch.getKeywords()[0] + "."
+              document.getElementById("moreinfo").innerHTML = "Lives in " + JSON.parse(this.responseText).display_name + ", is " + bestmatch.getAge() + ", and has experienced " + bestmatch.getKeywords()[0] + "."
             }
           };
           xhttp.open("GET", "https://nominatim.openstreetmap.org/reverse?format=json&lat="+bestmatch.getLocation().Lat+"&lon="+bestmatch.getLocation().Lon+"&zoom=18&addressdetails=1", true);
