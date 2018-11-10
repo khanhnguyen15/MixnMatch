@@ -58,7 +58,20 @@
         document.getElementById("msgInput").style.display = "block";
         document.getElementById("sendButton").style.display = "block";
         myName = name;
-        
+        // cheat: find myself in the database, then create a person object for myself, then call findclosestmatch()
+        var me;
+        for(var i = 0;i<data.length;i++){
+          if(data[i].Name == myName){
+            me = new Person(data[i].ID,data[i].Name,data[i].Gender,data[i].Age,data[i].Ethnicity, data[i].Keywords, data[i].Location);
+          }
+        }
+        if(me == null){
+          alert("no user found");
+        }
+        else{
+          var mybestmatch = me.findclosestmatch(data);
+          console.log(mybestmatch.getName());
+        }
       }      
     });
     $('#upload-file').on('change',function(evt){
