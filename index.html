@@ -18,8 +18,9 @@
     <script src="./lib/client.js"></script>
     <!-- functions -->
     <script src="./lib/data.js"></script>
-    <script src="./lib/person.js"></script>
+    
     <script src="./lib/api.js"></script>
+    <script src="./lib/person.js"></script>
     
     
   </head>  
@@ -44,9 +45,9 @@
   </div>
     </div>
     
-    <div class="card bg-warning border" style="visibility:hidden">
+    <div id="chatroom" class="card bg-warning border" style="display:none">
       <div class="card-body">
-        <p class="card-text whoareyouconnectedto">
+        <p id="whoareyouconnectedto" class="card-text">
         </p>
          <div id="log"></div>
     <form>  
@@ -74,14 +75,14 @@
           alert("no user found");
         }
         else{
+          
           var bestmatch = me.findclosestmatch(data);
+          
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
           connectToRealtime();
           $(".whoyouareconnectedto").html("Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.");
-          document.getElementById("msgInput").style.display = "block";
-          document.getElementById("sendButton").style.display = "block";
-          document.getElementById("log").style.display = "block";
+          document.getElementById("chatroom").style.display = "block";
         }
       }      
     });
