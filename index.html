@@ -47,8 +47,8 @@
     
     <div id="chatroom" class="card bg-warning border" style="display:none">
       <div class="card-body">
-        <p id="whoareyouconnectedto" class="card-text">
-        </p>
+        <span id="whoareyouconnectedto" class="card-text">
+        </span>
          <div id="log"></div>
     <form>  
 <input type="text" id="msgInput" class="textarea" placeholder="Enter your message">
@@ -67,11 +67,11 @@
         // cheat: find myself in the database, then create a person object for myself, then call findclosestmatch()
         var me;
         for(var i = 0;i<data.length;i++){
-          if(data[i].Name == myName){
+          if(data[i].Name === myName){
             me = new Person(data[i].ID,data[i].Name,data[i].Gender,data[i].Age,data[i].Ethnicity, data[i].Keywords, data[i].Location);
           }
         }
-        if(me == null){
+        if(me === undefined){
           alert("no user found");
         }
         else{
@@ -81,7 +81,7 @@
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
           connectToRealtime();
-          $(".whoyouareconnectedto").html("Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.");
+          $("#whoyouareconnectedto").html("Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.");
           document.getElementById("chatroom").style.display = "block";
         }
       }      
