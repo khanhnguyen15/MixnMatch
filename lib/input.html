@@ -13,7 +13,7 @@ Please input another reason you are unhappy:<input type="text" id="mykey2">
 Please input your Lat:<input id="mylat" type="number">
 Please input your Lon:<input id="mylon" type="number">
 
-
+  <div id = "gfh"></div>
 <p>Click the "Try it" button to get the text in the text field.</p>
 
 <button onclick="myFunction()">Try it</button>
@@ -28,7 +28,7 @@ function myFunction() {
     var key2 = document.getElementById("mykey2").value;
     var lat = document.getElementById("mylat").value;
     var lon = document.getElementById("mylon").value;
-    var person = { "ID":55,
+    var person = { 
           "Name":name,
           "Gender": gen,
           "Age":age,
@@ -36,9 +36,9 @@ function myFunction() {
           "Keywords":[key1, key2],
           "Location": { "Lat":lat, "Lon":-lon},
          };
-    var arr = require('./data.js').arr
-    arr.push(person)
-    data.append(person)
+    <!--localStorage.setItem(55, person);-->
+    var cat = localStorage.getItem(55);
+    document.getElementById("gfh").innerHTML = cat;
 }
 </script>
 
