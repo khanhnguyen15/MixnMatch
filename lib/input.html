@@ -16,7 +16,9 @@ Please input your Lon:<input id="mylon" type="number"><br>
 
 
 <button onclick="myFunction()">Submit</button>
-  <div id = "success"></div>
+  <div id = "feedback"></div>
+  <div id = "success">
+  <a href = "https://cosmic-whiskey.glitch.me/">Log In</a></div>
 
 <script>
 function myFunction() {
@@ -36,10 +38,10 @@ function myFunction() {
           "Keywords":[key1, key2],
           "Location": { "Lat":lat, "Lon":-lon},
          };
-    window.localStorage.setItem(66, JSON.stringify(person));
+   <!-- window.localStorage.setItem(66, JSON.stringify(person));-->
   var objectOutput = window.localStorage.getItem(66);
   console.log(objectOutput)
-  document.getElementById("success").innerHTML = "successfully "
+  document.getElementById("feedback").innerHTML = "successfully created user"
 }
 </script>
 
