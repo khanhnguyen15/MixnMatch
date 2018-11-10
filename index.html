@@ -18,8 +18,8 @@
     <script src="./lib/client.js"></script>
     <!-- functions -->
     <script src="./lib/data.js"></script>
-    <!--<script src="./lib/match.js"></script>-->
-    <script src="./lib/test.js"></script>
+    <script src="./lib/match.js"></script>
+    <script src="./lib/api.js"></script>
     
   </head>  
   <body>
@@ -55,8 +55,6 @@
     $('.login-button').on('click',function(evt){
       let name = document.querySelector('#input-name').value;
       if(name){
-        document.getElementById("msgInput").style.display = "block";
-        document.getElementById("sendButton").style.display = "block";
         myName = name;
         // cheat: find myself in the database, then create a person object for myself, then call findclosestmatch()
         var me;
@@ -71,6 +69,8 @@
         else{
           var mybestmatch = me.findclosestmatch(data);
           console.log(mybestmatch.getName());
+          document.getElementById("msgInput").style.display = "block";
+          document.getElementById("sendButton").style.display = "block";
         }
       }      
     });
