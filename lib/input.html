@@ -2,21 +2,21 @@
 <html>
 <body>
 
-<h3>A demonstration of how to access a Text Field</h3>
+<h3>Creating a new account</h3>
 
-Please input your preferred name:<input type="text" id="myname" >
-Please input your age:<input id="myage" type="number">
-Please input your enthnicity:<input type="text" id="myenth" >
-Please input your gender (Female or Male):<input type="text" id="mygen" >
-Please input one of the reasons you are unhappy:<input type="text" id="mykey1" >
-Please input another reason you are unhappy:<input type="text" id="mykey2">
-Please input your Lat:<input id="mylat" type="number">
-Please input your Lon:<input id="mylon" type="number">
+Please input your preferred name:<input type="text" id="myname" ><br>
+Please input your age:<input id="myage" type="number"><br>
+Please input your enthnicity:<input type="text" id="myenth" ><br>
+Please input your gender (Female or Male):<input type="text" id="mygen" ><br>
+Please input one of the reasons you are unhappy:<input type="text" id="mykey1" ><br>
+Please input another reason you are unhappy:<input type="text" id="mykey2"><br>
+Please input your Lat:<input id="mylat" type="number"><br>
+Please input your Lon:<input id="mylon" type="number"><br>
 
-  <div id = "gfh"></div>
-<p>Click the "Try it" button to get the text in the text field.</p>
 
-<button onclick="myFunction()">Try it</button>
+
+<button onclick="myFunction()">Submit</button>
+  <div id = "success"></div>
 
 <script>
 function myFunction() {
@@ -37,7 +37,9 @@ function myFunction() {
           "Location": { "Lat":lat, "Lon":-lon},
          };
     window.localStorage.setItem(66, JSON.stringify(person));
-  
+  var objectOutput = window.localStorage.getItem(66);
+  console.log(objectOutput)
+  document.getElementById("success").innerHTML = "successfully "
 }
 </script>
 
