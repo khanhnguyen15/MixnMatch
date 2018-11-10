@@ -50,11 +50,14 @@
     
     <div id="chatroom" class="card bg-warning" style="display:none">
       <div class="card-body">
-        <span id="whoareyouconnectedto" class="card-text">
+        <span id="whoareyouconnectedto" class="card-text font-weight-light">
         </span>
+        <p id="identity" class="card-text font-weight-light">
+          
+        </p>
          <div id="log"></div>
     <form>  
-<input type="textarea" id="msgInput" class="textarea" placeholder="Enter your message">
+<input type="text" id="msgInput" class="textarea" placeholder="Enter your message">
 <button id = "sendButton" class="btn btn-primary send-button" type="button" name="action" onclick="sendMessage()">
   Send Message
 </button>
@@ -84,9 +87,11 @@
           
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
-          connectToRealtime();
+          
           document.getElementById("whoareyouconnectedto").innerHTML="Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.";
+          document.getElementById("identity").innerHTML = bestmatch.getName();
           document.getElementById("chatroom").style.display = "block";
+          connectToRealtime();
         }
       }      
     });
