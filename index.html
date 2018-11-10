@@ -54,6 +54,8 @@
         <span id="whoareyouconnectedto" class="card-text font-weight-light">
         </span>
         <p id="identity" class="card-text font-weight-light">
+        </p>
+        <p id = "moreinfo" class="card-text font-weight-light">
           
         </p>
          <div id="log"></div>
@@ -91,7 +93,7 @@
           
           document.getElementById("whoareyouconnectedto").innerHTML="Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.";
           document.getElementById("identity").innerHTML = bestmatch.getName();
-          document.
+          document.getElementById("moreinfo").innerHTML = "Lives in " + bestmatch.getLocation() + ", is " + bestmatch.getAge() + ", and has experienced " + bestmatch.getKeywords()[0] + "."
           document.getElementById("chatroom").style.display = "block";
           connectToRealtime();
         }
