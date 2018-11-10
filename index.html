@@ -33,7 +33,7 @@
     <form>
       <div class="form-group col-md-6">
         <label for="input-name">Username</label>
-        <input type="url" class="form-control" id="input-name" placeholder="Username">
+        <input type="name" class="form-control" id="input-name" placeholder="Steve Jobs">
       </div>
       <div class="col-md-2">
         <button type="button" class="btn btn-primary login-button">Login</button>
@@ -44,19 +44,17 @@
     </div>
     
     <div class="card">
-    
+      <div class="card-body">
+        <span class="
+    <form>  
 <input style="display:none" type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
-
 <button style="display:none" id = "sendButton" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">
   Send Message
 </button>
-
+      </form>
  <div style="display:none" id="log"></div>
-      
+      </div>
     </div>
-    
-    
-
     
     <script>
     $('.login-button').on('click',function(evt){
@@ -78,7 +76,6 @@
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
           connectToRealtime();
-          alert(chatChannel);
           alert("YOUR BEST MATCH IS "+bestmatch.getName());
           document.getElementById("msgInput").style.display = "block";
           document.getElementById("sendButton").style.display = "block";
