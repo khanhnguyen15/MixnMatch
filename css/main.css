@@ -35,6 +35,11 @@ body {
 .time {
   font-size: 10px;
 }
+
 .from {
   font-size: 10px;
+}
+
+.login-button{
+  background-color: #EE2346 !important;
 }

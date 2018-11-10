@@ -23,7 +23,7 @@
     
   </head>  
   <body>
-    <div class="card">
+    <div class="card bg-info">
     <div class = "card-body">
     <h1 class="card-title">The Mix n Match Demo</h1>
     <p class="card-text">
@@ -43,9 +43,11 @@
   </div>
     </div>
     
-    <div class="card">
+    <div class="card bg-warning">
       <div class="card-body">
-        <span class="
+        <p class="card-text whoareyouconnectedto">
+          
+        </p>
     <form>  
 <input style="display:none" type="text" id="msgInput" class="materialize-textarea" placeholder="Enter your message">
 <button style="display:none" id = "sendButton" class="btn waves-effect waves-light" type="submit" name="action" onclick="sendMessage()">
@@ -76,7 +78,7 @@
           chatChannel = me.getId() + bestmatch.getId();
           chatChannel = chatChannel + "";
           connectToRealtime();
-          alert("YOUR BEST MATCH IS "+bestmatch.getName());
+          $(".whoyouareconnectedto").innerHTML = "Connect with "+bestmatch.getName() + " who has gone through similar issues as you have.";
           document.getElementById("msgInput").style.display = "block";
           document.getElementById("sendButton").style.display = "block";
           document.getElementById("log").style.display = "block";
