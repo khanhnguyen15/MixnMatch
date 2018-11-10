@@ -68,8 +68,11 @@
         }
         else{
           var bestmatch = me.findclosestmatch(data);
-          chatChannel = me.getName() + bestmatch.getName();
+          chatChannel = me.getId() + bestmatch.getId();
+          chatChannel = chatChannel + "";
           connectToRealtime();
+          alert(chatChannel);
+          alert("YOUR BEST MATCH IS "+bestmatch.getName());
           document.getElementById("msgInput").style.display = "block";
           document.getElementById("sendButton").style.display = "block";
           document.getElementById("log").style.display = "block";
