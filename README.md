@@ -1,3 +1,9 @@
+About MixnMatch
+=================
+
+Mix n Match is a realtime chatting webapp and matching algorithm that I and Chuan developed during JPMorgan #CodeForGood
+
+
 Welcome to Glitch
 =================
 
